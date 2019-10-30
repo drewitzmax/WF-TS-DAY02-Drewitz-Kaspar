@@ -16,3 +16,18 @@ class Person {
         console.log(this.introduce());
     }
 }
+
+class Workerperson extends Person {
+    protected salary : number;
+    protected jobLocation : string;
+
+    constructor(name:string, age:number, jobTitle:string, salary:number, jobLocation:string){
+        super(name, age, jobTitle);
+        this.salary = salary;
+        this.jobLocation = jobLocation;
+    }
+    protected worker(){
+        this.sayIntroduce()
+        console.log(`and I get ${this.salary} every month, and I work in ${this.jobLocation}`)
+    }
+}

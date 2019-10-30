@@ -13,3 +13,14 @@ class Person {
         console.log(this.introduce());
     }
 }
+class Workerperson extends Person {
+    constructor(name, age, jobTitle, salary, jobLocation) {
+        super(name, age, jobTitle);
+        this.salary = salary;
+        this.jobLocation = jobLocation;
+    }
+    worker() {
+        this.sayIntroduce();
+        console.log(`and I get ${this.salary} every month, and I work in ${this.jobLocation}`);
+    }
+}
